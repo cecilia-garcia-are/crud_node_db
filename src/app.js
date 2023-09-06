@@ -1,11 +1,14 @@
 import express from 'express';
 import db from './utils/database.js';
 import Todo from './models/todoModels.js';
+import 'dotenv/config';
+
 
 //Modelo
 Todo
 
-const PORT = 8000
+//PORT SERVIDOR DE NODE
+const PORT = process.env.PORT ?? 8000
 
 //conexion con la base de datos
 
