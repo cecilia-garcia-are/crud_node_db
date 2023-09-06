@@ -2,6 +2,8 @@ import express from 'express';
 import db from './utils/database.js';
 import Todo from './models/todoModels.js';
 import 'dotenv/config';
+import cors from 'cors';
+
 
 
 //Modelo
@@ -25,6 +27,7 @@ db.sync()
 //mi exress
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 //health check
 app.get('/', (req, res) => {
